@@ -11,8 +11,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: const MyHomePage(title: 'Contador App'),
     );
   }
 }
@@ -47,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  Color _getRandomColor(int _counter) {
+  Color __getColorSegunValor(int _counter) {
     if (_counter < 0) {
       return Colors.red;
     }
@@ -64,50 +66,46 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Stack(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Spacer(flex: 2),
-                Text('You have pushed the button this many times:'),
-                Text(
-                  '$_counter',
-                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                    color: _getRandomColor(_counter),
-                    fontSize: 80,
-                  ),
-                ),
-                Spacer(flex: 2),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      FloatingActionButton(
-                        onPressed: _decrementCounter,
-                        tooltip: 'Increment',
-                        child: Icon(Icons.remove),
-                      ),
-                      FloatingActionButton(
-                        onPressed: _reiniciar,
-                        tooltip: 'Descrement',
-                        child: Icon(Icons.refresh),
-                      ),
-                      FloatingActionButton(
-                        onPressed: _incrementCounter,
-                        tooltip: 'Descrement',
-                        child: Icon(Icons.add),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Spacer(flex: 2),
+            Text('Has presionado el botón esta cantidad de veces:'),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                color: __getColorSegunValor(_counter),
+                fontSize: 80,
+              ),
             ),
-          ),
-        ],
+            Spacer(flex: 2),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  FloatingActionButton(
+                    onPressed: _decrementCounter,
+                    tooltip: 'restar',
+                    child: Icon(Icons.remove),
+                  ),
+                  FloatingActionButton(
+                    onPressed: _reiniciar,
+                    tooltip: 'Reiniciar',
+                    child: Icon(Icons.refresh),
+                  ),
+                  FloatingActionButton(
+                    onPressed: _incrementCounter,
+                    tooltip: 'sumar',
+                    child: Icon(Icons.add),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
