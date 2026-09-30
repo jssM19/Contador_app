@@ -48,7 +48,7 @@ composición de widgets y buenas prácticas de desarrollo.
 
 Asegúrate de tener instalado:
 
-- [Flutter SDK](https://flutter.dev/docs/get-started/install) (versión 3.0 o superior)
+- [Flutter SDK](htt3ps://flutter.dev/docs/get-started/install) (versión 3.0 o superior)
 - [Dart SDK](https://dart.dev/get-dart) (incluido con Flutter)
 - Un editor como [VS Code](https://code.visualstudio.com/) o [Android Studio](https://developer.android.com/studio)
 - Un emulador o dispositivo físico para ejecutar la app
@@ -144,9 +144,9 @@ Este proyecto demuestra el uso correcto de los siguientes conceptos:
 
 ## 👩‍💻 Autora
 
-**Tu Nombre**
+**Jessica Moreno**
 
-- GitHub: [@TU-USUARIO](https://github.com/TU-USUARIO)
+- GitHub: [@jssM19](https://github.com/TU-USUARIO)
 - LinkedIn: [Tu perfil](https://linkedin.com/in/tu-perfil)
 
 ---
