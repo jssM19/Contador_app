@@ -23,11 +23,11 @@ class HistorialPage extends StatelessWidget {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
+      body: SizedBox(
+        width: double.infinity,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Spacer(flex: 2),
             Text(
               '${contadorModel.contador}',
               style: Theme.of(context).textTheme.headlineMedium?.copyWith(
@@ -35,10 +35,16 @@ class HistorialPage extends StatelessWidget {
                 fontSize: 80,
               ),
             ),
+            const SizedBox(height: 24),
             TextButton(
               onPressed: () => context.read<ContadorModel>().reiniciar(),
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white, // color del texto
+                backgroundColor: Colors.blue,
+              ),
               child: Text('Reiniciar desde aquí'),
             ),
+            const SizedBox(height: 24),
             Text('Este es el mismo contador de la pantalla anterior'),
           ],
         ),
