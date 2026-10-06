@@ -11,17 +11,6 @@ class HistorialPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Historial'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.history),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const HistorialPage()),
-              );
-            },
-          ),
-        ],
       ),
       body: SizedBox(
         width: double.infinity,
@@ -45,7 +34,14 @@ class HistorialPage extends StatelessWidget {
               child: Text('Reiniciar desde aquí'),
             ),
             const SizedBox(height: 24),
-            Text('Este es el mismo contador de la pantalla anterior'),
+            Text(
+              'Este es el mismo contador de la pantalla anterior',
+              style: TextStyle(
+                color: Colors.grey[600],
+                fontStyle: FontStyle.italic,
+              ),
+              textAlign: TextAlign.center,
+            ),
           ],
         ),
       ),
